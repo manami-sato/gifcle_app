@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="373" height="235" viewBox="0 0 373 235">
+  <defs>
+    <filter id="長方形_416" x="0" y="0" width="373" height="235" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="グループ_478" data-name="グループ 478" transform="translate(-1 -70)">
+    <g id="グループ_477" data-name="グループ 477">
+      <g transform="matrix(1, 0, 0, 1, 1, 70)" filter="url(#長方形_416)">
+        <rect id="長方形_416-2" data-name="長方形 416" width="313" height="175" transform="translate(30 30)" fill="#fff"/>
+      </g>
+      <text id="ギフト交換期限:2021年10月10日" transform="translate(48 231)" fill="#707070" font-size="12" font-family="HiraKakuStd-W4, Hiragino Kaku Gothic Std"><tspan x="0" y="0">ギフト交換期限:2021年10月10日</tspan></text>
+      <text id="クーポン使用期限:2021年10月20日" transform="translate(48 254)" fill="#707070" font-size="12" font-family="HiraKakuStd-W4, Hiragino Kaku Gothic Std"><tspan x="0" y="0">クーポン使用期限:2021年10月20日</tspan></text>
+      <text id="_500" data-name="500" transform="translate(48 193)" fill="#707070" font-size="41" font-family="HiraKakuStd-W4, Hiragino Kaku Gothic Std"><tspan x="0" y="0">500</tspan></text>
+      <text id="円分引換券" transform="translate(140 193)" fill="#707070" font-size="12" font-family="HiraKakuStd-W4, Hiragino Kaku Gothic Std"><tspan x="0" y="0">円分引換券</tspan></text>
+      <line id="線_63" data-name="線 63" y2="175" transform="translate(261.042 100.625)" fill="none" stroke="#9f9f9f" stroke-width="1" stroke-dasharray="20 20"/>
+    </g>
+  </g>
+</svg>

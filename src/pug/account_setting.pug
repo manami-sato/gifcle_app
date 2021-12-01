@@ -1,0 +1,26 @@
+doctype html
+html(lang="ja")
+	head
+		include _head.pug
+		link(rel="stylesheet", href="css/account.css")
+	body
+		header
+			h1.app__header.app__header--back アカウント設定
+		main.setting__wrap
+			div.account__main
+				div.account__main--icon
+					img(src="img/app_user.svg", alt="アイコン")
+				div.account__main--txt
+					p アイコン変更
+					div プレーンイラストから選ぶ
+					div アルバムから選ぶ
+			div.setting__value--headline 名前
+			input(type="text",placeholder="ひかり").setting__value--txt
+			div.setting__value--headline 誕生日（変更できません）
+			div.setting__value--txt#bg__gray 1月1日
+			p.setting__txt
+				|名前とアイコンは他のユーザーに公開されます。<br>
+				|個人情報や公序良俗に反する内容は記載しないでください。
+			a(href="account.html").setting__btn 保存
+		script(src="js/common.js")
+		script(src="js/back.js")

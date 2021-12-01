@@ -1,0 +1,270 @@
+@import "ress";
+@import "ver";
+@import "common";
+
+main {
+  @include mainSet($p: 25px 0 120px);
+}
+
+.account__main {
+  display: flex;
+  width: 90%;
+  height: 110px;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+  .account__main--icon {
+    width: 90px;
+    height: 90px;
+    border-radius: 45px;
+    background: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    img {
+      width: 70%;
+    }
+  }
+  .account__main--setting {
+    display: block;
+    background: #dbdbdb;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    position: absolute;
+    bottom: 3px;
+    right: 0;
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      width: 20px;
+      height: 4px;
+      border-radius: 2px;
+      background: #fff;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      margin: auto;
+    }
+    &::after {
+      transform: rotateZ(90deg);
+    }
+  }
+  .account__main--txt {
+    display: flex;
+    width: 65%;
+    justify-content: space-around;
+  }
+  .account__main--account {
+    span {
+      &:first-child {
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+        font-weight: bold;
+      }
+      &:last-child {
+        font-size: 1.8rem;
+        color: #a88536;
+        font-weight: bold;
+        display: inline-block;
+        margin: 0 5px;
+      }
+    }
+  }
+  .account__main--rank {
+    display: flex;
+    background: darken($color: $pailGray, $amount: 5%);
+    height: 26px;
+    width: 180px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    font-size: 1.2rem;
+    margin: 7px auto 0;
+  }
+}
+header {
+  position: relative;
+}
+.account__header--notice {
+  position: absolute;
+  bottom: 14px;
+  right: 20px;
+  width: 27px;
+  height: 27px;
+  svg {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transform: rotateZ(15deg);
+    path {
+      fill: #9b9b9b;
+    }
+  }
+}
+.account__warning {
+  width: 80%;
+  margin: 15px auto 0;
+  .account__warning--txt {
+    display: block;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #ff1919;
+    margin-bottom: 5px;
+    &:last-child {
+      margin: 0;
+    }
+  }
+}
+.account__guide {
+  width: 80%;
+  // height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $white;
+  margin: 20px auto 25px;
+  border-radius: 40px;
+  img{
+    width: 100%;
+  }
+}
+.account__setting {
+  margin-bottom: 20px;
+  &:last-child {
+    margin: 0;
+  }
+  div {
+    @include valueSet();
+    @include arrowSet();
+    font-size: 1.3rem;
+    font-weight: normal;
+  }
+}
+
+.setting__wrap {
+  .account__main--txt {
+    width: 180px;
+    flex-direction: column;
+    p {
+      font-size: 1.1rem;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    div {
+      line-height: 2rem;
+    }
+  }
+}
+.setting__txt {
+  text-align: center;
+  margin: 35px 0 20px;
+}
+.setting__btn {
+  @include btnSet($p: auto, $m: 0 auto);
+}
+.setting__value--headline {
+  @include headlineSet();
+}
+.setting__value--txt {
+  @include valueSet();
+  border-top: #eee 1px solid;
+  font-size: 1.6rem;
+}
+
+// モーダル
+.account__modal {
+  // padding: 30px 0;
+  display: none;
+  pointer-events: none;
+  opacity: 0;
+  width: 80%;
+  height: 70%;
+  border-radius: 20px;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 10;
+  box-shadow: 0 0 30px rgba($color: #000000, $alpha: 0.15);
+  flex-direction: column;
+  // justify-content: space-around;
+  justify-content: center;
+  align-items: center;
+}
+.account__modal--headline {
+  font-size: 1.6rem;
+  font-weight: normal;
+}
+.account__modal--img {
+  margin: 20px 0;
+  width: 180px;
+  height: 180px;
+  img{
+    width: 100%;
+  }
+}
+.account__modal--txt {
+  line-height: 2.2rem;
+  text-align: center;
+  margin: 0 0px 30px;
+}
+.account__modal--page {
+  display: flex;
+  width: 80px;
+  justify-content: space-between;
+  div {
+    width: 10px;
+    height: 10px;
+    background: $gray;
+    border-radius: 5px;
+  }
+}
+#account__modal--page--view {
+  background: $yellow;
+}
+.account__modal--link {
+  @include btnSet($b: $yellowToOrange, $m: 20px 0, $p: auto);
+}
+.account__modal--link2 {
+  font-size: 1rem;
+}
+@keyframes modal {
+  0% {
+    display: none;
+    pointer-events: none;
+    opacity: 0;
+  }
+  100% {
+    display: flex;
+    pointer-events: auto;
+    opacity: 1;
+  }
+}
+.account__modal--bg {
+  display: none;
+  opacity: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba($color: #000000, $alpha: 0.3);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 7;
+}
+.account__modal--view {
+  display: flex;
+  pointer-events: auto;
+  opacity: 1;
+  animation: modal 0.2s;
+}

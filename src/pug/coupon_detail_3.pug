@@ -1,0 +1,15 @@
+doctype html
+html(lang="ja")
+	head
+		include _head.pug
+		link(rel="stylesheet", href="css/coupon.css")
+	body
+		header
+			h1.app__header.app__header--back クーポン
+		main.favorite__wrap
+			include _coupon_set.pug
+			div.detail__apply
+				div.detail__apply--1 このクーポンは交換済みです
+				div.detail__apply--3 このクーポンは使用済みです
+		script(src="js/common.js")
+		script(src="js/useCoupon_3.js")

@@ -1,0 +1,26 @@
+@import "ress";
+@import "ver";
+@import "common";
+
+main{
+	@include mainSet;
+}
+.notice__wrap{
+	>div{
+		div,a{
+			@include valueSet();
+			display: flex;
+			align-items: center;
+			padding:0 7%;
+			font-size:1.3rem;
+			@include arrowSet();
+		}
+		&:first-child{
+			margin-bottom: 20px;
+		}
+	}
+	.notice__btn--unread{
+		font-weight: bold;
+		color: #FF1919;
+	}
+}

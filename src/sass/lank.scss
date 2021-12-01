@@ -1,0 +1,140 @@
+@import "ress";
+@import "ver";
+@import "common";
+
+main {
+  @include mainSet($p: 25px 0 50px);
+}
+
+.lank__headline--description{
+	color:#fff;
+	// font-weight: bold;
+	height: 25px;
+	width: 240px;
+	border-radius:15px ;
+	background: $pink;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto;
+}
+.lank__headline--txt{
+	font-size:1.6rem;
+	text-align: center;
+	font-weight: bold;
+	margin: 10px 0 20px;
+}
+
+table {
+  font-weight: bold;
+  text-align-last: center;
+  border-spacing: 2px 4px;
+	margin: 0 auto;
+}
+td {
+  width: 120px;
+	text-align: center;
+}
+
+.lank__table--head{
+	width: 80px;
+	font-size:2rem;
+	border-right:6px solid $pailGray;
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	line-height: 2rem;
+}
+tr {
+	height: 70px;
+	&:first-child{
+		height: 40px;
+		font-size: 1.3rem;
+		th {
+			background: #fffef8;
+			position: relative;
+			&::after {
+				content: "";
+				display: block;
+				background: url("../img/app_table_triangle.svg") no-repeat;
+				background-size: contain;
+				width: 20px;
+				height: 20px;
+				position: absolute;
+				bottom: -20px;
+				left: 0;
+				right: 0;
+				margin: 0 auto;
+			}
+		}
+	}
+  &:nth-child(2) {
+		height: 60px;
+    background: lighten($color: $yellow, $amount: 40%);
+		.lank__table--head{
+			height: 60px;
+      background: lighten($color: $yellow, $amount: 45%);
+      span {
+        background: lighten($color: $yellow, $amount: 40%);
+      }
+		}
+  }
+  &:nth-child(3) {
+    background: lighten($color: $yellow, $amount: 20%);
+		.lank__table--head{
+			height: 70px;
+      background: lighten($color: $yellow, $amount: 30%);
+			span {
+				background: lighten($color: $yellow, $amount: 20%);
+			}
+		}
+  }
+  &:nth-child(4) {
+    background: $yellow;
+		.lank__table--head{
+			height: 70px;
+      background: lighten($color: $yellow, $amount: 15%);
+      span {
+        background:$yellow;
+      }
+		}
+  }
+  &:nth-child(5) {
+    background: lighten($color: $orange, $amount: 10%);
+		.lank__table--head{
+			height: 70px;
+      background: lighten($color: $yellow, $amount: 20%);
+      span {
+        background: lighten($color: $yellow, $amount: 10%);
+      }
+		}
+  }
+  &:nth-child(6) {
+		height: 85px;
+    background: $pink;
+    font-size: 1.7rem;
+		.lank__table--head{
+			height: 85px;
+      background: lighten($color: $pink, $amount: 10%);
+			span {
+				background: $pink;
+			}
+		}
+  }
+
+  span {
+    background: lighten($color: #fceeb9, $amount: 10%);
+    font-size: 1.1rem;
+		line-height: 1.1rem;
+    font-weight: normal;
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+		margin-bottom: 5px;
+  }
+}
+.lank__foot--txt{
+  margin-top: 20px;
+	text-align: center;
+}

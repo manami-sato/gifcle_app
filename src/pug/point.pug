@@ -1,0 +1,29 @@
+doctype html
+html(lang="ja")
+	head
+		include _head.pug
+		link(rel="stylesheet", href="css/point.css")
+	body
+		header
+			h1.app__header ポイント
+		main
+			div.point__main
+				div
+					div.point__main--headline Gifcleポイント
+					div.point__main--barcode
+						img(src="img/app_barcode.svg", alt="バーコード")
+					div.point__main--owned 保有ポイント:39ポイント
+			p.point__attention
+				|【ご利用上の注意】<br>
+				|※提携店舗にてご精算時にこの画面をご提示ください。<br>
+				|※ポイントの後付けはできません。<br>
+				|※Gifcleクーポンとの併用はできません。
+			a(href="#").point__about
+				img(src="img/app_point_bunner.png", alt="Gifcleクーポンって？")
+				//- div
+				//- div
+			div.point__list 使える店舗一覧
+
+		include _nav.pug
+		script(src="js/common.js")
+		script(src="js/point.js")

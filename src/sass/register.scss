@@ -1,0 +1,47 @@
+@import "ress";
+@import "ver";
+@import "common";
+
+main {
+  @include mainSet;
+}
+.register__value--headline {
+  @include headlineSet();
+}
+.register__value--txt {
+  @include valueSet();
+  border-top: #eee 1px solid;
+  display: flex;
+  padding: 15px 10%;
+  justify-content: space-between;
+  &::placeholder{
+    opacity: 0.6;
+  }
+}
+.register__value--txt2 {
+  @include valueSet(40px);
+}
+#register__price--choiced {
+  img {
+    opacity: 1;
+  }
+}
+.register__value--category {
+  width: 90px;
+  img {
+    opacity: 0.4;
+  }
+}
+#register__category--choiced {
+  img {
+    opacity: 1;
+  }
+}
+
+.register__btn {
+  @include btnSet($p: auto, $b: $gray);
+}
+.register__btn--set {
+  pointer-events: auto;
+  background: $yellowToOrange;
+}

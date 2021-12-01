@@ -1,0 +1,147 @@
+$yellow:#FFCE00;
+$orange:#FF9D00;
+$pink:#FF8B8B;
+$blue:#0B799A;
+$black:#707070;
+$gray:#C4C4C4;
+$pailGray:#FAFAFA;
+$white:#fff;
+// 色
+
+$yellowToOrange:linear-gradient(90deg, $yellow, $orange);
+// linear-gradient(90deg, #FFCE00, #FF9D00)
+
+@mixin btnSet($b:$yellowToOrange,$m:30px auto 0,$p:none,$w:130px,$h:35px){
+	width: $w;
+	background: $b;
+	height: $h;
+	border-radius: 30px;
+	margin: $m;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	pointer-events:$p;
+	font-weight: bold;
+	box-shadow: 0 0 20px rgba($color: #000000, $alpha: 0.2);
+}
+@mixin mainSet($p: 25px 0 60px){
+	padding: $p;
+	background:$pailGray;
+}
+@mixin valueSet($h:55px){
+	min-height: $h;
+	background: $white;
+	border-bottom: #eee 1px solid;
+	padding: 0 10%;
+	display: flex;
+	align-items: center;
+	width: 100%;
+	font-weight: bold;
+	&:first-child{
+		border-top: #eee 1px solid;
+	}
+}
+@mixin headlineSet(){
+	margin: 25px 10% 10px;
+  &:first-child {
+    margin: 0 10% 10px;
+  }
+}
+@mixin arrowSet($r:7%,$l:auto,$b:rotateZ(135deg),$a:rotateZ(45deg),$t:21px,$p:relative,$bo:21px){
+	position: $p;
+	&::before,
+	&::after{
+		content: "";
+		position: absolute;
+		width: 15px;
+		height: 4px;
+		border-radius: 5px;
+		display: block;
+		background: #D5D5D5;
+		right: $r;
+		left: $l;
+	}
+	&::before{
+		transform: $b;
+		bottom:$bo;
+	}
+	&::after{
+		transform: $a;
+		top:$t;
+	}
+}
+@mixin giftSet(){
+  width: 310px;
+  height: 170px;
+  border-radius: 10px;
+  background: $white;
+  box-shadow: 0 0 20px rgba($color: #000000, $alpha: 0.15);
+  margin: 0 auto;
+	display: flex;
+	div{
+		height: 100%;
+		&:first-child{
+			width: 70%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			margin: 0 0 0 7%;
+		}
+		&:last-child{
+			border-left: $gray 1px dotted;
+			width: 30%;
+		}
+	}
+	.coupon__btn--shop{
+		font-weight: bold;
+		font-size: 1.4rem;
+	}
+	.coupon__btn--price{
+		font-size: 1.3rem;
+		span{
+			font-size:4rem;
+			font-weight: bold;
+			margin-right: 7px;
+		}
+	}
+	.coupon__btn--limit{
+		font-size: 1.1rem;
+		margin-bottom: 3px;
+		&:last-child{
+			margin: 0;
+		}
+	}
+}
+@mixin giftGetSet($b:$white,$c:1,$r:1,$co:$black){
+	background: $b;
+	grid-column: $c;
+	grid-row: $r;
+	font-weight: bold;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: $co;
+}
+
+@mixin attentionTxtSet(){
+	width: 85%;
+  margin: 0 auto;
+  font-size: 1rem;
+  color: #939393;
+  line-height: 1.8rem;
+}
+
+@mixin couponApplySet($h:70px,$b:$yellowToOrange,$w:bold,$c:$white,$s:1.6rem,$z:2){
+	width: 100%;
+	height: $h;
+	background: $b;
+	font-weight: $w;
+	color:$c;
+	font-size:$s;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: $z;
+	box-shadow: 0 0 20px rgba($color: #000000, $alpha: 0.15);
+}

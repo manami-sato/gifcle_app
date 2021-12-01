@@ -1,0 +1,448 @@
+@import "ress";
+@import "ver";
+@import "common";
+
+.coupon__tab--btn {
+  display: flex;
+  background: darken($color: $pailGray, $amount: 5%);
+  height: 50px;
+  div {
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    margin: auto 0 0;
+    &:first-child {
+      border-radius: 0 50px 0 0;
+    }
+    &:last-child {
+      border-radius: 50px 0 0 0;
+    }
+  }
+  #coupon__tab--choiced {
+    background: $white;
+  }
+}
+.coupon__tab--wrap {
+  > div {
+		padding: 0 0 120px;
+    display: none;
+  }
+  #coupon__wrap--choiced {
+    display: block;
+  }
+}
+/* -------------------------------
+▼所持クーポンここから▼
+------------------------------- */
+.coupon__list--btn {
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  a {
+    @include giftSet();
+    margin-bottom: 25px;
+    &:last-child {
+      margin: 0;
+    }
+  }
+	.coupon__btn--shop{
+		margin-top: 20px;
+	}
+}
+.coupon__list--history {
+  @include valueSet();
+  @include arrowSet();
+  font-size: 1.3rem;
+  font-weight: normal;
+  border-top: #eee 1px solid;
+}
+.coupon__search{
+  .coupon__list--history{
+    margin-top: 30px;
+    border-top: #eee 1px solid;
+    border-bottom:none;
+    &:last-child{
+      margin: 0;
+      border-bottom: #eee 1px solid;
+    }
+  }
+}
+/* -------------------------------
+▲所持クーポンここまで▲
+------------------------------- */
+/* -------------------------------
+▼クーポン検索ここから▼
+------------------------------- */
+.coupon__search--head {
+  display: grid;
+  grid-template-columns: 80% 20%;
+  grid-template-rows: 40px auto;
+  width: 90%;
+  margin: 25px auto 0;
+}
+.coupon__search--value {
+  grid-column: 1;
+  grid-row: 1;
+  background: lighten($color: $gray, $amount: 20%);
+  border-radius: 20px;
+  padding: 0 20px;
+  &:focus {
+    border-style: none;
+    background: rgba($color: $yellow, $alpha: 0.4);
+  }
+  &:placeholder {
+    color: $pailGray;
+  }
+}
+.coupon__search--btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  // position: relative;
+  // width: 50px;
+  // height: 44px;
+  // appearance: none;
+  // cursor: pointer;
+  div {
+    // position: absolute;
+    // left: 0;
+    // width: 100%;
+    // height: 4px;
+    // border-radius: 4px;
+    background: $gray;
+    position: relative;
+    width: 30px;
+    border-radius: 5px;
+    height: 4px;
+    top: 0;
+    right: 0;
+    &::before,
+    &::after {
+      content: "";
+      background: $gray;
+      position: absolute;
+      display: block;
+      width: 30px;
+      border-radius: 5px;
+      height: 4px;
+      right: 0;
+      // left: 0;
+      // width: 100%;
+      // height: 4px;
+      // border-radius: 4px;
+    }
+    &::before {
+      top: -10px;
+      // top: 20px;
+    }
+    &::after {
+      top: 10px;
+      // bottom: 0;
+    }
+  }
+}
+#displayAdd {
+  height: auto;
+  padding: 20px 20px 15px;
+  // animation:conditions 1s linear;
+}
+@keyframes conditions{
+  0%{
+    height: 0;
+    padding: 0;
+  }
+  100%{
+    height: auto;
+    padding: 20px 20px 15px;
+  }
+}
+.coupon__search--conditions {
+  grid-column: 1/3;
+  grid-row: 2;
+  background: rgba($color: $yellow, $alpha: 0.3);
+  border-radius: 20px;
+  margin: 20px auto 0;
+  // padding: 20px 20px 15px;
+  padding: 0;
+  transition: 0.2s height,0.2 opacity;
+  height: 0;
+  // opacity: 0;
+	width: 90%;
+  > div {
+    font-weight: bold;
+  }
+  > ul {
+    span {
+      display: block;
+      margin: 10px 0 5px 5px;
+    }
+    > li > ul {
+      display: flex;
+      flex-wrap: wrap;
+      li {
+        height: 25px;
+        padding: 0 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba($color: $white, $alpha: 0.9);
+        border-radius: 15px;
+        margin: 0 5px 5px 0;
+      }
+    }
+  }
+}
+.conditionsAdd{
+  color:$white;
+  font-weight: bold;
+}
+.coupon__search--grid {
+  margin: 20px auto 0;
+  grid-column: 1/3;
+  grid-row: 3;
+  display: grid;
+	width: 90%;
+  grid-template-columns: 47% 47%;
+  grid-gap: 22px 6%;
+  grid-template-rows: 200px 100px 150px;
+  > * {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(70%);
+    }
+    &:nth-child(1) {
+      grid-column: 1/3;
+      grid-row: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      ul {
+        width: 100%;
+        height: 90%;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        li {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+    &:nth-child(2) {
+      grid-column: 1/3;
+      grid-row: 2;
+    }
+    &:nth-child(3) {
+      grid-column: 1;
+      grid-row: 3;
+    }
+    &:nth-child(4) {
+      grid-column: 2;
+      grid-row: 3;
+    }
+  }
+  ul .coupon__search--img{
+    background: linear-gradient(90deg, rgba(0,0,0,0.3), rgba(0,0,0,0.3)),url("../img/app_coupon_coffee.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+  .coupon__search--img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    &:nth-child(2){
+      background: linear-gradient(90deg, rgba(0,0,0,0.3), rgba(0,0,0,0.3)),url("../img/app_coupon_udon.jpeg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+    }
+    &:nth-child(3){
+      background: linear-gradient(90deg, rgba(0,0,0,0.3), rgba(0,0,0,0.3)),url("../img/app_coupon_potato.jpeg");
+      background-repeat: no-repeat;
+      background-size:cover;
+      background-position: center center;
+    }
+    &:nth-child(4){
+      background: linear-gradient(90deg, rgba(0,0,0,0.3), rgba(0,0,0,0.3)),url("../img/app_coupon_nikuman.jpeg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+    }
+    a {
+      width: 100%;
+      height: 100%;
+      color: $white;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-end;
+      text-align: right;
+      padding: 15px 20px;
+    }
+    .coupon__search--fav {
+      position: absolute;
+      top: 15px;
+      left: 10px;
+      width: 30px;
+      height: 30px;
+      svg {
+        width: 100%;
+      }
+    }
+    .coupon__search--item{
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+    .coupon__search--price{
+      span{
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+    }
+  }
+  .favorite {
+    fill: #b1b1b1;
+  }
+  #favAdd {
+    fill: $pink;
+  }
+  .coupon__search--circle {
+    display: flex;
+    div {
+      width: 10px;
+      height: 10px;
+      border-radius: 5px;
+      background: #c1c1c1;
+      margin-right: 10px;
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+}
+/* -------------------------------
+▲クーポン検索ここまで▲
+------------------------------- */
+/* -------------------------------
+▼子ページここから▼
+------------------------------- */
+/* ------- 使用済みクーポン ------ */
+.hisory__wrap {
+  @include mainSet($p: 25px 0 0);
+  .hisory__btn {
+    flex-direction: column;
+    justify-content: center;
+    @include valueSet(100px);
+    @include arrowSet($t:43px,$bo:43px);
+    p {
+      margin: 0 auto 0 0;
+      line-height: 2.4rem;
+      &:nth-child(1),
+      &:nth-child(3) {
+        font-weight: normal;
+      }
+    }
+  }
+}
+/* ------ お気に入りクーポン ------ */
+.favorite__wrap {
+  @include mainSet($p: 25px 0 0);
+}
+.favorite__btn {
+  @include valueSet(70px);
+  padding: 0 7%;
+  @include arrowSet();
+  .favorite__btn--icon {
+    width: 30px;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+  }
+  p {
+    margin: 0 auto 0 0;
+    line-height: 2.3rem;
+    &:nth-child(1) {
+      font-weight: normal;
+    }
+  }
+}
+/* -------- クーポン詳細 -------- */
+.detail__coupon {
+  height: 250px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+.detail__coupon--txt {
+  position: inherit;
+  z-index: 2;
+  color: $white;
+  text-shadow: 0 0 20px #000;
+  margin: auto auto 25px 25px;
+  p {
+    &:nth-child(1) {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    &:nth-child(2) {
+      span {
+        &:nth-child(1) {
+          font-size: 4rem;
+          font-weight: bold;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}
+.detail__coupon--img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(50%);
+  }
+}
+.detail__attention {
+  @include attentionTxtSet();
+  margin-top: 30px;
+}
+.detail__apply {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  .detail__apply--1 {
+    @include couponApplySet(40px, $gray, normal, $black, 1.2rem, auto);
+  }
+  .detail__apply--2 {
+    @include couponApplySet();
+  }
+  .detail__apply--3 {
+    @include couponApplySet($b: $gray, $w: normal, $c: $black);
+  }
+}
+/* -------------------------------
+▲子ページここまで▲
+------------------------------- */

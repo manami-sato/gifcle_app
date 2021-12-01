@@ -1,0 +1,28 @@
+doctype html
+html(lang="ja")
+	head
+		include _head.pug
+		link(rel="stylesheet", href="css/gift.css")
+	body
+		header
+			h1.app__header 送信完了
+		main.gift__wrap--3
+			div.gift__coupon
+				div
+					p.coupon__btn--price
+						span 500
+						|円分引換券
+					p.coupon__btn--limit ギフト交換期限:2021年10月13日
+					p.coupon__btn--limit ギフト使用期限:交換日より10日後
+				div
+			div
+				|ギフトをゲットしました！<br>
+				|今すぐクーポンと交換しましょう！
+			div.gift__suggest
+				div
+				div
+				div
+			a(href="coupon.html").gift__giftSearch クーポンを探す
+			a(href="notice.html").gift__back トップに戻る
+		script(src="js/common.js")
+		script(src="js/gift_4.js")

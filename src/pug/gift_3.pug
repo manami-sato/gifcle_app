@@ -1,0 +1,31 @@
+doctype html
+html(lang="ja")
+	head
+		include _head.pug
+		link(rel="stylesheet", href="css/gift.css")
+	body
+		header
+			h1.app__header.app__header--back 送信確認
+		main.gift__wrap--3
+			div.gift__value--headline 受け取り/割引金額
+			div.gift__value--txt#bg__gray
+				span 500/100
+				span 円
+			div.gift__value--headline ステージ別割引金額（ステージI）
+			div.gift__value--txt#bg__gray
+				span 0
+				span 円
+			div.gift__value--headline
+				span ポイントを使用(保有:39ポイント)
+				input(type="checkbox").gift__value--checkbox
+			div.gift__value--txt.gift__value--point
+				input(type="number",placeholder="0",min="1",max="39").gift__value--number
+				span ポイント
+			div.gift__value--headline 支払金額
+			div.gift__value--txt#bg__gray
+				span 400
+				span 円
+			a(href="gift_4.html").gift__btn 確定
+		//- include _nav.pug
+		script(src="js/common.js")
+		script(src="js/gift_3.js")

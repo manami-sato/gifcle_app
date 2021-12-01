@@ -1,0 +1,41 @@
+doctype html
+html(lang="ja")
+	head
+		include _head.pug
+		link(rel="stylesheet", href="css/gift.css")
+	body
+		header
+			h1.app__header.app__header--back ギフト受け取り
+		main.gift__wrap--1
+			div.gift__coupon
+				div
+					p.coupon__btn--price
+						span 500
+						|円分引換券
+					p.coupon__btn--limit ギフト交換期限:2021年10月13日
+					p.coupon__btn--limit ギフト使用期限:交換日より10日後
+				div
+			div.gift__from
+				div
+					//- span
+					//- 	img(src="img/app_user.svg")
+					span.gift__txt--1 かのん
+					|さんより<br>
+					|ギフトが届きました！やったー！
+			div.gift__attention
+				|【ギフトを受け取る前の注意】<br>
+				|※ギフトを受け取るためには、他のユーザーに下記金額でギフトを<br>
+				|送る必要があります。<br>
+				|※ギフトには交換期限が、交換したクーポンには使用期限があります。ご確認の上お受け取りください。期限の過ぎたギフト及びクーポンはお支払いが済んでいても破棄されます。<br>
+				|※ギフトを希望しない場合、別のユーザーにパスすることができます。<br>
+				|※受け取り期限を超過したギフトは自動的にパスされます。
+			div.gift__send
+				div.gift__send--description
+					|このクーポンは
+					span.gift__txt--1 400
+					span.gift__txt--2 円
+					|で次の送り先を確定できます
+				a(href="gift_2_1.html").gift__send--send 受け取る（送り先を探す）
+				div.gift__send--pass パスする
+		script(src="js/common.js")
+		script(src="js/gift_1.js")

@@ -1,0 +1,67 @@
+doctype html
+html(lang="ja")
+	head
+		include _head.pug
+		link(rel="stylesheet", href="css/history.css")
+	body
+		header
+			h1.app__header.app__header--back ギフト詳細
+		main
+			h2
+				div
+					img(src="img/app_category2_1.svg", alt="#")
+				div
+					span 新年明けましてハピグリ
+					span イベント日:2021年1月1日
+			div.gift__coupon
+				div
+					p.coupon__btn--price
+						span 500
+						|円分引換券
+					p.coupon__btn--limit ギフト交換日:2021年9月17日
+					p.coupon__btn--limit ギフト使用期限:2021年9月27日
+				div
+			p.history__from
+				span かのん
+				|さんにお祝いのギフトをもらいました！
+			table.history__invoice
+				tr
+					th 指定したギフト
+					td
+						span 500
+						|円
+				tr
+					th 割引金額
+					td
+						span -100
+						|円
+				tr
+					th ステージ別割引金額（ステージI）
+					td
+						span -0
+						|円
+				tr
+					th ポイント利用
+					td
+						span -0
+						|P
+				tr
+					th 請求金額
+					td
+						span 400
+						|円
+			a(href="coupon.html").gift__giftSearch クーポンを探す
+			a(href="notice.html").gift__back ギフト未取得です
+			div.history__back
+				div.history__back--img
+					img(src="img/app_category2_2.svg", alt="#")
+				div.history__back--txt
+					p
+						|お返しは
+						span あきお
+						|さんに<br>
+						|励ましのギフトを送りました！
+		include _nav.pug
+		script(src="js/common.js")
+		script(src="js/back.js")
+		script(src="js/history.js")

@@ -1,0 +1,22 @@
+doctype html
+html(lang="ja")
+	head
+		include _head.pug
+		link(rel="stylesheet", href="css/sign.css")
+	body
+		main
+			div.sign__wrap
+				div.sign__wrap--headline ログイン
+				form
+					div.sign__form#item1
+						p.sign__form--headline メールアドレス
+						input(type="text",placeholder="example@example.com").sign__form--value
+					div.sign__form#item2
+						p.sign__form--headline パスワード
+						input(type="password",placeholder="半角英数字で8文字以上").sign__form--value
+					a(href="#").sign__form--forget メールアドレス・パスワードを忘れた &gt;
+					a(href="calendar.html").sign__form--btn ログイン
+				span.sign__wrap--spl まだアカウントをお持ちでない方は
+					a(href="signup.html") 新規登録
+		script(src="js/common.js")
+		script(src="js/signin.js")

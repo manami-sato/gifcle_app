@@ -1,0 +1,20 @@
+doctype html
+html(lang="ja")
+	head
+		include _head.pug
+		link(rel="stylesheet", href="css/notice.css")
+	body
+		header
+			h1.app__header.app__header--back お知らせ
+		main.notice__wrap
+			div
+				a(href="gift_1.html").notice__btn--unread 受け取っていないギフトがあります
+				a(href="coupon_detail_1.html").notice__btn--unread 使用期限の近いクーポンがあります
+				a(href="#").notice__btn--unread 交換していないギフトがあります
+			div
+				div.notice__btn--past 過去の通知
+				div.notice__btn--past 過去の通知
+				div.notice__btn--past 過去の通知
+		//- include _nav.pug
+		script(src="js/common.js")
+		script(src="js/notice.js")

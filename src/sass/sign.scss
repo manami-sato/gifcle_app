@@ -1,0 +1,96 @@
+@import "ress";
+@import "ver";
+@import "common";
+
+main {
+  background: linear-gradient(135deg, #faeb7a, #ffb529);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* モーダル */
+.sign__wrap {
+  position: relative;
+  width: 85%;
+  height: 80%;
+  background: $white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .sign__wrap--headline {
+    font-size: 1.6rem;
+    text-align: center;
+    font-weight: bold;
+  }
+  form {
+    margin: 20px auto 0;
+    width: 85%;
+  }
+  .sign__form {
+    margin: 15px 0 7px;
+    &:first-child {
+      margin: 0 0 7px;
+    }
+    > span {
+      color: tomato;
+      margin: 5px 0 0;
+      display: block;
+    }
+  }
+  .sign__form--headline {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 1.3rem;
+  }
+  .sign__form--value {
+    height: 40px;
+    border-radius: 7px;
+    width: 100%;
+    padding: 0 10px;
+    background: #f0f0f0;
+    &::placeholder {
+      color: $gray;
+    }
+    &:focus {
+      background: #fff4ce;
+      border-style: none;
+    }
+    select {
+      height: 100%;
+      margin: 0 10px;
+    }
+    option {
+      text-align: center;
+    }
+  }
+  .sign__form--btn {
+    @include btnSet($b: $gray, $m: 25px auto 0);
+  }
+  .sign__btn--set {
+    pointer-events: auto;
+    background: $yellowToOrange;
+  }
+  .sign__wrap--spl {
+    position: absolute;
+    display: block;
+    text-align: center;
+    bottom: 15px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    a {
+      text-decoration: underline;
+      margin-left: 3px;
+      display: inline-block;
+    }
+  }
+  .sign__form--forget {
+    text-decoration: underline;
+    display: block;
+    margin-top: 10px;
+  }
+}

@@ -1,0 +1,260 @@
+@import "ress";
+@import "ver";
+@import "common";
+
+main {
+  @include mainSet($p: 25px 0 0);
+}
+
+/* -------------------------------
+▼受け取り画面（①）ここから▼
+------------------------------- */
+/* ------- クーポンイメージ ------- */
+.gift__coupon {
+  @include giftSet();
+  .coupon__btn--price {
+    margin: 20px 0 15px;
+  }
+  + div {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.4rem;
+    margin: 25px 0;
+  }
+}
+/* -------- ギフト送信元 --------- */
+.gift__from {
+  // display: flex;
+  // justify-content: center;
+  // margin: 30px auto 20px;
+  margin: 0 auto 20px;
+  text-align: center;
+  font-weight: bold;
+  span {
+    // height: 20px;
+    // display: flex;
+    // align-items: center;
+    img {
+      width: 20px;
+    }
+  }
+}
+/* -------- ギフト諸注意 -------- */
+.gift__attention {
+  @include attentionTxtSet();
+}
+.gift__txt--1 {
+  color: $yellow;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+.gift__txt--2 {
+  color: $yellow;
+}
+/* ------- ギフトフッター① ------- */
+.gift__send {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: grid;
+  width: 100%;
+  grid-template-columns: 75% 25%;
+  grid-template-rows: 40px 70px;
+  div {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .gift__send--description {
+    @include giftGetSet();
+    grid-column: 1/3;
+  }
+  .gift__send--send {
+    @include giftGetSet($b: $yellowToOrange, $r: 2, $co: $white);
+    font-size: 1.6rem;
+  }
+  .gift__send--pass {
+    @include giftGetSet($c: 2, $r: 2, $co: $yellow);
+    border-top: #eee 1px solid;
+  }
+}
+/* -------------------------------
+▲受け取り画面（①）ここまで▲
+------------------------------- */
+
+/* -------------------------------
+▼送信画面（②）ここから▼
+------------------------------- */
+.gift__step {
+  color: #b5b5b5;
+  font-size: 2rem;
+  text-align: center;
+  font-weight: bold;
+}
+.gift__txt {
+  margin: 20px 0 15px;
+  text-align: center;
+}
+.gift__category {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 400px;
+  margin: 0 auto;
+  div {
+    width: 135px;
+    height: 135px;
+    background: $white;
+    border-radius: 50%;
+    margin: 10px 0;
+  }
+  #gift__category--choiced {
+    img {
+      opacity: 1;
+    }
+  }
+  img {
+    opacity: 0.4;
+  }
+}
+.gift__check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  span {
+    display: inline-block;
+    margin: 0 0 0 5px;
+  }
+}
+/* ------- 送信画面（②-1） ------- */
+.gift__txt{
+  &+ .gift__category {
+    div {
+      &:first-child {
+        margin: 10px 100px;
+      }
+    }
+  }
+}
+.gift__search--1 {
+  @include btnSet($b: $gray, $m: 20px auto 0);
+}
+.gift__search--set {
+  pointer-events: auto;
+  background: $yellowToOrange;
+}
+/* ------- 送信画面（②-2） ------- */
+.gift__result {
+  position: relative;
+  margin: 0 auto;
+  width: 230px;
+  .gift__result--icon {
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: 70%;
+      height: 70%;
+      object-fit: cover;
+    }
+  }
+  .gift__category {
+    position: absolute;
+    left: -55px;
+    bottom: -30px;
+  }
+  + p {
+    margin: 35px 0 15px;
+  }
+}
+.gift__wrap--2 {
+  .gift__search--2 {
+    @include btnSet($p: auto, $m: 20px auto 0);
+  }
+}
+/* ------- ギフトフッター② ------- */
+.gift__pass {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: #fff;
+}
+/* -------------------------------
+▲送信画面（②）ここまで▲
+------------------------------- */
+/* -------------------------------
+▼送信画面（③）ここから▼
+------------------------------- */
+.gift__value--headline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @include headlineSet();
+}
+.gift__value--txt {
+  @include valueSet();
+  border-top: #eee 1px solid;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 10%;
+  span {
+    vertical-align: baseline;
+    font-size: 1.3rem;
+    &:first-child {
+      font-weight: bold;
+    }
+  }
+}
+.gift__value--point {
+  background: $pailGray;
+  input {
+    pointer-events: none;
+    width: 100px;
+  }
+}
+.gift__btn {
+  @include btnSet();
+  pointer-events: auto;
+}
+/* -------------------------------
+▲送信画面（③）ここまで▲
+------------------------------- */
+/* -------------------------------
+▼完了画面（④）ここから▼
+------------------------------- */
+.gift__giftSearch {
+  @include btnSet($p: auto, $w: 270px, $h: 60px);
+  font-size: 1.6rem;
+}
+.gift__back {
+  @include btnSet($m: 15px auto 0, $p: auto, $b: $gray);
+  font-weight: normal;
+  color: $black;
+}
+.gift__suggest {
+  display: flex;
+  width: 90%;
+  justify-content: space-around;
+  margin: 0 auto;
+  div {
+    width: 30%;
+    padding-top: 30%;
+    background: $white;
+  }
+}
+/* -------------------------------
+▲完了画面（④）ここまで▲
+------------------------------- */

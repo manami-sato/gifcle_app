@@ -1,0 +1,27 @@
+doctype html
+html(lang="ja")
+	head
+		include _head.pug
+		link(rel="stylesheet", href="css/calendar.css")
+	body
+		header
+			h1.app__header イベント登録
+		main
+			div.calendar__month
+				//- div
+				div.calendar__month--prev
+				h2
+				div.calendar__month--next
+				//- a(href="register.html").calendar__plan
+			ul.calendar__dayOfWeek
+				li Sun
+				li Mon
+				li Tue
+				li Wed
+				li Thu
+				li Fri
+				li Sat
+			div.calendar__date
+		include _nav.pug
+		script(src="js/common.js")
+		script(src="js/calendar.js")

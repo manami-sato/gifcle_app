@@ -1,0 +1,66 @@
+@import "ress";
+@import "ver";
+@import "common";
+
+main{
+	@include mainSet($p:0 0 120px);
+}
+.point__main{
+	height: 280px;
+	width: 100%;
+	background: $yellowToOrange;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 30px;
+	>div{
+		width: 85%;
+		height: 75%;
+		background: rgba($color: $white, $alpha: 0.9);
+		border-radius: 40px;
+		box-shadow: 0 0 30px rgba($color: #000000, $alpha: 0.15);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		div{
+			width: 90%;
+		}
+	}
+	.point__main--headline{
+		font-weight: bold;
+		text-align: center;
+		font-size: 1.4rem;
+	}
+	.point__main--barcode{
+		margin: 30px auto 10px;
+	}
+	.point__main--owned{
+		font-size: 1.1rem
+	}
+}
+.point__attention{
+	@include attentionTxtSet();
+}
+.point__about{
+	display: flex;
+	justify-content: space-between;
+	width: 80%;
+	margin: 25px auto;
+	img{
+		width: 100%;
+	}
+	div{
+		height: 100px;
+		width: 48%;
+		border: $gray 1px solid;
+		border-radius:20px ;
+		background: $white;
+	}
+}
+.point__list{
+	@include valueSet();
+	@include arrowSet();
+	font-weight: normal;
+	border-top: #eee 1px solid;
+}

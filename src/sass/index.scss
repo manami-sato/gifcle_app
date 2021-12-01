@@ -1,0 +1,142 @@
+@import "ress";
+@import "ver";
+@import "common";
+
+main {
+  background: linear-gradient(135deg, #faeb7a, #ffb529);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 35vh 0 20vh;
+  position: relative;
+}
+.index__logo {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 400px;
+}
+.index__account {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  max-width: 400px;
+  margin: 0 auto;
+  .index__account--signup {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    height: 70px;
+    border-radius: 35px;
+    font-weight: bold;
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 20px rgba($color: #000000, $alpha: 0.15);
+  }
+  span {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 1.3rem;
+    margin-top: 20px;
+    .index__account--signin {
+      text-decoration: underline;
+      margin-left: 5px;
+      display: inline-block;
+    }
+  }
+}
+
+.index__modal {
+  // padding: 30px 0;
+  display: none;
+  pointer-events: none;
+  opacity: 0;
+  width: 80%;
+  height: 70%;
+  border-radius: 20px;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 10;
+  box-shadow: 0 0 30px rgba($color: #000000, $alpha: 0.15);
+  flex-direction: column;
+  // justify-content: space-around;
+  justify-content: center;
+  align-items: center;
+}
+.index__modal--headline {
+  font-size: 1.6rem;
+  font-weight: normal;
+}
+.index__modal--img {
+  margin: 20px 0;
+  width: 180px;
+  height: 180px;
+  img{
+    width: 100%;
+  }
+}
+.index__modal--txt {
+  line-height: 2.2rem;
+  text-align: center;
+  margin: 0 0px 30px;
+}
+.index__modal--page {
+  display: flex;
+  width: 80px;
+  justify-content: space-between;
+  div {
+    width: 10px;
+    height: 10px;
+    background: $gray;
+    border-radius: 5px;
+  }
+}
+#index__modal--page--view {
+  background: $yellow;
+}
+.index__modal--link {
+  @include btnSet($b: $yellowToOrange, $m: 20px 0, $p: auto);
+}
+.index__modal--link2 {
+  font-size: 1rem;
+}
+@keyframes modal {
+  0% {
+    display: none;
+    pointer-events: none;
+    opacity: 0;
+  }
+  100% {
+    display: flex;
+    pointer-events: auto;
+    opacity: 1;
+  }
+}
+.index__modal--bg {
+  display: none;
+  opacity: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba($color: #000000, $alpha: 0.3);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.index__modal--view {
+  display: flex;
+  pointer-events: auto;
+  opacity: 1;
+  animation: modal 0.2s;
+}

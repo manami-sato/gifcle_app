@@ -1,0 +1,28 @@
+doctype html
+html(lang="ja")
+	head
+		include _head.pug
+		link(rel="stylesheet", href="css/gift.css")
+	body
+		header
+			h1.app__header.app__header--back 送り先を探す
+		main.gift__wrap--2
+			div.gift__step STEP.2
+			p.gift__txt サーチ結果
+			div.gift__result
+				div.gift__result--icon
+					img(src="img/app_user.svg")
+				div.gift__category
+					div#gift__category--choiced
+						img(src="img/app_category_2.svg")
+			p.gift__txt
+				span.gift__txt--1 あきお
+				|さんがヒットしました。<br>
+				|このユーザーにギフトを贈りますか？
+			a(href="gift_3.html").gift__search--2 決定
+			div.gift__circle
+				div
+				div
+			div.gift__pass 探すのをやめ、パスする
+		script(src="js/common.js")
+		script(src="js/gift_2_2.js")

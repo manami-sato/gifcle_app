@@ -1,0 +1,31 @@
+doctype html
+html(lang="ja")
+	head
+		include _head.pug
+		link(rel="stylesheet", href="css/register.css")
+	body
+		header
+			h1.app__header.app__header--back イベント登録
+		main
+			div.register__value--headline イベント概要
+			input(type="text",placeholder="イベントタイトル").register__value--txt
+			input(type="text").register__value--txt2
+			div.register__value--headline 希望の金額
+			div.register__value--txt
+				div.register__value--price 300円
+				div.register__value--price 500円
+				div.register__value--price 700円
+				div.register__value--price 1000円
+			div.register__value--headline このイベントはどんなきもちをもらいたいですか？
+			div.register__value--txt
+				div.register__value--category
+					img(src="img/app_category_1.svg", alt="お祝い")
+				div.register__value--category
+					img(src="img/app_category_2.svg", alt="励まし")
+				div.register__value--category
+					img(src="img/app_category_3.svg", alt="寄り添い")
+			a(href="#") 「きもちのカテゴリー」とは？ 
+			div.register__btn 登録
+		//- include _nav.pug
+		script(src="js/common.js")
+		script(src="js/register.js")

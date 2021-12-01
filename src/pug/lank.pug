@@ -1,0 +1,53 @@
+doctype html
+html(lang="ja")
+	head
+		include _head.pug
+		link(rel="stylesheet", href="css/lank.css")
+	body
+		header
+			h1.app__header.app__header--back ランクシステムとは？
+		main
+			p.lank__headline--description 継続するとおトクがいっぱい！
+			div.lank__headline--txt Gifcleのランクシステムについて
+			table
+				tbody
+					tr
+						th ステージ
+						th クーポン割引率
+						th ポイント還元率
+					tr
+						th.lank__table--head
+							span 0ヶ月-
+							|I
+						td 0円
+						td 3%
+					tr
+						th.lank__table--head
+							span 3ヶ月-
+							|II
+						td 50円
+						td 5%
+					tr
+						th.lank__table--head
+							span 6ヶ月-
+							|III
+						td 100円
+						td 7%
+					tr
+						th.lank__table--head
+							span 9ヶ月-
+							|IV
+						td 150円
+						td 7%
+					tr
+						th.lank__table--head
+							span 12ヶ月-
+							|V
+						td 200円
+						td 10%
+			p.lank__foot--txt
+				|会員の期間に応じてランクがどんどんアップ！<br>
+				|Gifcleをもっとおトクに使おう！
+		//- include _nav.pug
+		script(src="js/common.js")
+		script(src="js/back.js")

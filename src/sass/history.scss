@@ -1,0 +1,183 @@
+@import "ress";
+@import "ver";
+@import "common";
+
+main {
+  @include mainSet($p: 25px 0 120px);
+}
+
+/* -------------------------------
+▼履歴まとめここから▼
+------------------------------- */
+.history__btn {
+  @include valueSet(110px);
+  @include arrowSet($t: 48px, $bo: 49px);
+  font-weight: normal;
+  padding: 0 7%;
+}
+.history__btn--icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 40px;
+  overflow: hidden;
+  margin-right: 15px;
+  img {
+    width: 100%;
+  }
+}
+.history__btn--txt {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.history__txt--ttl {
+  font-size: 1.3rem;
+}
+.history__txt--price {
+  font-size: 2rem;
+  font-weight: bold;
+}
+/* -------------------------------
+▲履歴まとめここまで▲
+------------------------------- */
+/* -------------------------------
+▼子ページここから▼
+------------------------------- */
+h2{
+  display: flex;
+  width: 85%;
+  margin: 0 auto 15px;
+  div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    span{
+      &:first-child{
+        color: $yellow;
+      }
+      &:last-child{
+        font-weight: normal;
+        font-size:1.2rem;
+      }
+    }
+    &:first-child{
+      width: 60px;
+      height: 60px;
+      margin-right: 10px;
+      img{
+        width: 100%;
+      }
+    }
+  }
+}
+.history__from{
+  text-align: center;
+  margin: 15px 0;
+  span{
+    color: $yellow;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+}
+.history__invoice {
+  border-collapse: collapse;
+  width: 80%;
+  margin: 0 auto;
+  tr {
+    height: 25px;
+    display: flex;
+    align-items: center;
+    th{
+      width: 70%;
+      text-align: left;
+      font-weight: normal;
+    }
+    td{
+      width: 30%;
+      text-align: right;
+      span{
+        font-weight: bold;
+        font-size: 1.4rem;
+      }
+    }
+    &:last-child{
+      margin-top: 20px;
+      position: relative;
+      &::before{
+        content: "";
+        display: block;
+        background: $gray;
+        position: absolute;
+        top: -10px;
+        left: 0;
+        right: 0;
+        margin:0 auto;
+        width: 85%;
+        height: 1px;
+        border-radius: 1px;
+      }
+      th{
+        font-size: 1.4rem;
+        font-weight: bold;
+      }
+      td{
+        font-size: 1.3rem;
+        span{
+          font-size: 1.8rem;
+          color: $yellow;
+        }
+      }
+    }
+  }
+}
+/* ------- クーポンイメージ ------- */
+.gift__coupon {
+  @include giftSet();
+  .coupon__btn--price {
+    margin: 20px 0 15px;
+  }
+  + div {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.4rem;
+    margin: 25px 0;
+  }
+}
+/* ------- クーポンボタン -------- */
+.gift__giftSearch {
+  @include btnSet($p: auto, $w: 270px, $h: 60px);
+  font-size: 1.6rem;
+}
+.gift__back {
+  @include btnSet($m: 15px auto 0, $p: auto, $b: $gray);
+  font-weight: normal;
+  color: $black;
+}
+/* ----------- お返し ----------- */
+.history__back{
+  width: 90%;
+  background: $white;
+  margin: 40px auto 0;
+  display: flex;
+  padding: 3% 5%;
+  border-radius:20px ;
+  font-size: 1.3rem;
+}
+.history__back--img{
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+.history__back--txt{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  span{
+    font-weight: bold;
+    color: $yellow;
+    font-size: 1.4rem;
+  }
+}
+/* -------------------------------
+▲子ページここまで▲
+------------------------------- */

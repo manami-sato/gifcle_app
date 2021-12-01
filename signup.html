@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="keywords" content="">
+    <meta name="description" content="#">
+    <meta name="twitter:card" content="summary">
+    <meta property="og:site_name" content="Gifcle">
+    <meta property="og:title" content="Gifcle">
+    <meta property="og:description" content="#">
+    <meta property="og:url" content="http://click.ecc.ac.jp/ecc/msatou/Gifcle_app/">
+    <meta property="og:image" content="img/app_favicon.png">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="600">
+    <meta property="og:image:height" content="400">
+    <meta property="og:type" content="website">
+    <link rel="shortcut icon" href="img/app_favicon.png" type="image/vnd.microsoft.icon">
+    <link rel="apple-touch-icon" href="img/app_favicon.png">
+    <link rel="manifest" href="manifest.json">
+    <script src="../common.js"></script>
+    <title>Gifcle app</title>
+    <link rel="stylesheet" href="css/sign.css">
+  </head>
+  <body>
+    <main>
+      <div class="sign__wrap">
+        <div class="sign__wrap--headline">新規会員登録</div>
+        <form>
+          <div class="sign__form" id="item1">
+            <p class="sign__form--headline">メールアドレス</p>
+            <input class="sign__form--value" type="text" placeholder="example@example.com">
+          </div>
+          <div class="sign__form" id="item2">
+            <p class="sign__form--headline">パスワード</p>
+            <input class="sign__form--value" type="password" placeholder="半角英数字で8文字以上">
+          </div>
+          <div class="sign__form" id="item3">
+            <p class="sign__form--headline">パスワード（確認用）</p>
+            <input class="sign__form--value" type="password" placeholder="半角英数字で8文字以上">
+          </div>
+          <div class="sign__form" id="item4">
+            <p class="sign__form--headline">誕生日（変更できません）</p>
+            <div class="sign__form--value">
+              <select class="yearBox" name="year">
+                <option value="" selected>-</option>
+              </select><span>年</span>
+              <select class="monthBox" name="month">
+                <option value="" selected>-</option>
+              </select><span>月</span>
+              <select class="dateBox" name="date">
+                <option value="" selected>-</option>
+              </select><span>日</span>
+            </div>
+          </div><a class="sign__form--btn" href="calendar.html">登録</a>
+        </form><span class="sign__wrap--spl">すでにアカウントをお持ちの方は<a href="signin.html">ログイン</a></span>
+      </div>
+    </main>
+    <script src="js/common.js"></script>
+    <script src="js/signup.js"></script>
+  </body>
+</html>

@@ -1,0 +1,124 @@
+@import "ress";
+@import "ver";
+@import "common";
+
+main{
+	@include mainSet;
+}
+
+.calendar__dayOfWeek{
+	width: 100%;
+	display: flex;
+	height: 35px;
+	justify-content: space-around;
+	align-items: center;
+	padding:0 5%;
+	background: $white;
+	border-top: #eee 1px solid;
+	border-bottom: #eee 1px solid;
+}
+.calendar__month{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 5% 10px;
+	h2{
+		display: flex;
+		// font-size:2.2rem;
+	}
+	.calendar__plan{
+		display: flex;
+		background:$yellow;
+		height: 30px;
+		align-items: center;
+		justify-content: center;
+		width: 60px;
+		border-radius: 20px;
+		&::before,
+		&::after{
+			content: "";
+			display: block;
+			width: 3px;
+			height: 15px;
+			background:$white;
+		}
+		&::after{
+			transform: rotateZ(90deg) translateY(3px);
+		}
+	}
+}
+
+.calendar__month--prev,
+.calendar__month--next{
+	width: 30px;
+	height: 30px;
+	background:$yellow;
+	border-radius: 15px;
+	position: relative;
+	&::before,
+	&::after{
+		content: "";
+		position: absolute;
+		width: 12px;
+		height: 4px;
+		border-radius: 5px;
+		display: block;
+		background: $white;
+	}
+	&::before{
+		transform: rotateZ(45deg);
+		bottom:16px;
+	}
+	&::after{
+		transform:rotateZ(135deg);
+		top:16px;
+	}
+}
+.calendar__month--prev{
+	&::before{
+		transform: rotateZ(135deg);
+		left:8px ;
+	}
+	&::after{
+		transform:rotateZ(45deg);
+		left:8px ;
+	}
+}
+.calendar__month--next{
+	&::before{
+		right:8px ;
+		transform: rotateZ(45deg);
+	}
+	&::after{
+		right:8px ;
+		transform:rotateZ(135deg);
+	}
+}
+
+.calendar__date{
+	margin-top: 10px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	background: $white;
+	border-top: #eee 1px solid;
+	border-bottom: #eee 1px solid;
+	>*{
+		width: 13%;
+		height: 60px;
+		padding: 3px 0 0 3%;
+		font-size:1.5rem;
+		font-weight: bold;
+		display: block;
+		&:nth-child(7n+1){
+			color: #BCBCBC;
+		}
+		&:nth-child(7n){
+			color: #BCBCBC;
+			margin-right: 3%;
+		}
+	}
+}
+.calendarAdd{
+	color: $pink;
+}

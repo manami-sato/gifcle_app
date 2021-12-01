@@ -1,0 +1,1214 @@
+@charset "UTF-8";
+/*!
+ * ress.css • v1.1.2
+ * MIT License
+ * github.com/filipelinhares/ress
+ */
+/* # =================================================================
+   # Global selectors
+   # ================================================================= */
+html {
+  box-sizing: border-box;
+  overflow-y: scroll;
+  /* All browsers without overlaying scrollbars */
+  -webkit-text-size-adjust: 100%;
+  /* iOS 8+ */
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+::before,
+::after {
+  text-decoration: inherit;
+  /* Inherit text-decoration and vertical align to ::before and ::after pseudo elements */
+  vertical-align: inherit;
+}
+
+/* Remove margin, padding of all elements and set background-no-repeat as default */
+* {
+  background-repeat: no-repeat;
+  /* Set `background-repeat: no-repeat` to all elements */
+  padding: 0;
+  /* Reset `padding` and `margin` of all elements */
+  margin: 0;
+}
+
+/* # =================================================================
+   # General elements
+   # ================================================================= */
+/* Add the correct display in iOS 4-7.*/
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+hr {
+  overflow: visible;
+  /* Show the overflow in Edge and IE */
+}
+
+/*
+* Correct `block` display not defined for any HTML5 element in IE 8/9
+* Correct `block` display not defined for `details` or `summary` in IE 10/11
+* and Firefox
+* Correct `block` display not defined for `main` in IE 11
+*/
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+summary {
+  display: list-item;
+  /* Add the correct display in all browsers */
+}
+
+small {
+  font-size: 80%;
+  /* Set font-size to 80% in `small` elements */
+}
+
+[hidden],
+template {
+  display: none;
+  /* Add the correct display in IE */
+}
+
+abbr[title] {
+  border-bottom: 1px dotted;
+  /* Add a bordered underline effect in all browsers */
+  text-decoration: none;
+  /* Remove text decoration in Firefox 40+ */
+}
+
+a {
+  background-color: transparent;
+  /* Remove the gray background on active links in IE 10 */
+  -webkit-text-decoration-skip: objects;
+  /* Remove gaps in links underline in iOS 8+ and Safari 8+ */
+}
+
+a:active,
+a:hover {
+  outline-width: 0;
+  /* Remove the outline when hovering in all browsers */
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  /* Specify the font family of code elements */
+}
+
+b,
+strong {
+  font-weight: bolder;
+  /* Correct style set to `bold` in Edge 12+, Safari 6.2+, and Chrome 18+ */
+}
+
+dfn {
+  font-style: italic;
+  /* Address styling not present in Safari and Chrome */
+}
+
+/* Address styling not present in IE 8/9 */
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+
+/* https://gist.github.com/unruthless/413930 */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* # =================================================================
+   # Forms
+   # ================================================================= */
+input {
+  border-radius: 0;
+}
+
+/* Apply cursor pointer to button elements */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"],
+[role="button"] {
+  cursor: pointer;
+}
+
+/* Replace pointer cursor in disabled elements */
+[disabled] {
+  cursor: default;
+}
+
+[type="number"] {
+  width: auto;
+  /* Firefox 36+ */
+}
+
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* Safari 8+ */
+}
+
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+  /* Safari 8 */
+}
+
+textarea {
+  overflow: auto;
+  /* Internet Explorer 11+ */
+  resize: vertical;
+  /* Specify textarea resizability */
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font: inherit;
+  /* Specify font inheritance of form elements */
+}
+
+optgroup {
+  font-weight: bold;
+  /* Restore the font weight unset by the previous rule. */
+}
+
+button {
+  overflow: visible;
+  /* Address `overflow` set to `hidden` in IE 8/9/10/11 */
+}
+
+/* Remove inner padding and border in Firefox 4+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: 0;
+  padding: 0;
+}
+
+/* Replace focus style removed in the border reset above */
+button:-moz-focusring,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  outline: 1px dotted ButtonText;
+}
+
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  /* Correct the inability to style clickable types in iOS */
+}
+
+button,
+select {
+  text-transform: none;
+  /* Firefox 40+, Internet Explorer 11- */
+}
+
+/* Remove the default button styling in all browsers */
+button,
+input,
+select,
+textarea {
+  background-color: transparent;
+  border-style: none;
+  color: inherit;
+}
+
+/* Style select like a standard input */
+select {
+  -moz-appearance: none;
+  /* Firefox 36+ */
+  -webkit-appearance: none;
+  /* Chrome 41+ */
+}
+
+select::-ms-expand {
+  display: none;
+  /* Internet Explorer 11+ */
+}
+
+select::-ms-value {
+  color: currentColor;
+  /* Internet Explorer 11+ */
+}
+
+legend {
+  border: 0;
+  /* Correct `color` not being inherited in IE 8/9/10/11 */
+  color: inherit;
+  /* Correct the color inheritance from `fieldset` elements in IE */
+  display: table;
+  /* Correct the text wrapping in Edge and IE */
+  max-width: 100%;
+  /* Correct the text wrapping in Edge and IE */
+  white-space: normal;
+  /* Correct the text wrapping in Edge and IE */
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* Correct the inability to style clickable types in iOS and Safari */
+  font: inherit;
+  /* Change font properties to `inherit` in Chrome and Safari */
+}
+
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* Correct the odd appearance in Chrome and Safari */
+  outline-offset: -2px;
+  /* Correct the outline style in Safari */
+}
+
+/* # =================================================================
+   # Specify media element style
+   # ================================================================= */
+img {
+  border-style: none;
+  /* Remove border when inside `a` element in IE 8/9/10 */
+}
+
+/* Add the correct vertical alignment in Chrome, Firefox, and Opera */
+progress {
+  vertical-align: baseline;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+  /* Internet Explorer 11- */
+}
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* Internet Explorer 11+, Windows Phone 8.1+ */
+}
+
+/* # =================================================================
+   # Accessibility
+   # ================================================================= */
+/* Hide content from screens but not screenreaders */
+@media screen {
+  [hidden~="screen"] {
+    display: inherit;
+  }
+  [hidden~="screen"]:not(:active):not(:focus):not(:target) {
+    position: absolute !important;
+    clip: rect(0 0 0 0) !important;
+  }
+}
+
+/* Specify the progress cursor of updating elements */
+[aria-busy="true"] {
+  cursor: progress;
+}
+
+/* Specify the pointer cursor of trigger elements */
+[aria-controls] {
+  cursor: pointer;
+}
+
+/* Specify the unstyled cursor of disabled, not-editable, or otherwise inoperable elements */
+[aria-disabled] {
+  cursor: default;
+}
+
+/* # =================================================================
+   # Selection
+   # ================================================================= */
+/* Specify text selection background color and omit drop shadow */
+::-moz-selection {
+  background-color: #b3d4fc;
+  /* Required when declaring ::selection */
+  color: #000;
+  text-shadow: none;
+}
+
+::selection {
+  background-color: #b3d4fc;
+  /* Required when declaring ::selection */
+  color: #000;
+  text-shadow: none;
+}
+
+/* -------------------------------
+▼全体設定ここから▼
+------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  touch-action: pan-y;
+  color: #707070;
+  font-size: 1.2rem;
+  overflow: scroll;
+  font-family: sans-serif;
+}
+
+body > * {
+  max-width: 500px;
+}
+
+a {
+  color: #707070;
+  text-decoration: none;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+input {
+  font-size: 1.6rem;
+}
+
+/* -------------------------------
+▲全体設定ここまで▲
+------------------------------- */
+.app__header {
+  height: 70px;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  font-size: 1.6rem;
+  font-weight: normal;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 15px;
+  position: relative;
+}
+
+/* -------------------------------
+▼navここから▼
+------------------------------- */
+nav {
+  background: #fff;
+  z-index: 5;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  padding: 0 10px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  height: 60px;
+}
+
+nav ul a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-size: 1rem;
+}
+
+nav .nav__link {
+  width: calc((100% - 80px) / 4);
+  height: 100%;
+  margin-top: 2px;
+}
+
+nav .nav__link a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #8a8a8a;
+}
+
+nav .nav__link a img {
+  height: 50%;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin-bottom: 3px;
+}
+
+nav .nav__link--calendar {
+  width: 80px;
+  position: relative;
+}
+
+nav .nav__link--calendar a {
+  background: linear-gradient(90deg, #FFCE00, #FF9D00);
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+nav .nav__link--calendar a img {
+  width: 45%;
+  margin-bottom: 3px;
+}
+
+/* -------------------------------
+▲navここまで▲
+------------------------------- */
+#bg__gray {
+  background: #FAFAFA;
+}
+
+.app__header--back {
+  position: relative;
+}
+
+.app__header--back::before, .app__header--back::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 4px;
+  border-radius: 5px;
+  display: block;
+  background: #D5D5D5;
+  right: auto;
+  left: 5%;
+}
+
+.app__header--back::before {
+  transform: rotateZ(45deg);
+  bottom: 21px;
+}
+
+.app__header--back::after {
+  transform: rotateZ(135deg);
+  top: 36px;
+}
+
+.coupon__tab--btn {
+  display: flex;
+  background: #ededed;
+  height: 50px;
+}
+
+.coupon__tab--btn div {
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  margin: auto 0 0;
+}
+
+.coupon__tab--btn div:first-child {
+  border-radius: 0 50px 0 0;
+}
+
+.coupon__tab--btn div:last-child {
+  border-radius: 50px 0 0 0;
+}
+
+.coupon__tab--btn #coupon__tab--choiced {
+  background: #fff;
+}
+
+.coupon__tab--wrap > div {
+  padding: 0 0 120px;
+  display: none;
+}
+
+.coupon__tab--wrap #coupon__wrap--choiced {
+  display: block;
+}
+
+/* -------------------------------
+▼所持クーポンここから▼
+------------------------------- */
+.coupon__list--btn {
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.coupon__list--btn a {
+  width: 310px;
+  height: 170px;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  margin: 0 auto;
+  display: flex;
+  margin-bottom: 25px;
+}
+
+.coupon__list--btn a div {
+  height: 100%;
+}
+
+.coupon__list--btn a div:first-child {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 0 0 7%;
+}
+
+.coupon__list--btn a div:last-child {
+  border-left: #C4C4C4 1px dotted;
+  width: 30%;
+}
+
+.coupon__list--btn a .coupon__btn--shop {
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+.coupon__list--btn a .coupon__btn--price {
+  font-size: 1.3rem;
+}
+
+.coupon__list--btn a .coupon__btn--price span {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-right: 7px;
+}
+
+.coupon__list--btn a .coupon__btn--limit {
+  font-size: 1.1rem;
+  margin-bottom: 3px;
+}
+
+.coupon__list--btn a .coupon__btn--limit:last-child {
+  margin: 0;
+}
+
+.coupon__list--btn a:last-child {
+  margin: 0;
+}
+
+.coupon__list--btn .coupon__btn--shop {
+  margin-top: 20px;
+}
+
+.coupon__list--history {
+  min-height: 55px;
+  background: #fff;
+  border-bottom: #eee 1px solid;
+  padding: 0 10%;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  font-weight: bold;
+  position: relative;
+  font-size: 1.3rem;
+  font-weight: normal;
+  border-top: #eee 1px solid;
+}
+
+.coupon__list--history:first-child {
+  border-top: #eee 1px solid;
+}
+
+.coupon__list--history::before, .coupon__list--history::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 4px;
+  border-radius: 5px;
+  display: block;
+  background: #D5D5D5;
+  right: 7%;
+  left: auto;
+}
+
+.coupon__list--history::before {
+  transform: rotateZ(135deg);
+  bottom: 21px;
+}
+
+.coupon__list--history::after {
+  transform: rotateZ(45deg);
+  top: 21px;
+}
+
+.coupon__search .coupon__list--history {
+  margin-top: 30px;
+  border-top: #eee 1px solid;
+  border-bottom: none;
+}
+
+.coupon__search .coupon__list--history:last-child {
+  margin: 0;
+  border-bottom: #eee 1px solid;
+}
+
+/* -------------------------------
+▲所持クーポンここまで▲
+------------------------------- */
+/* -------------------------------
+▼クーポン検索ここから▼
+------------------------------- */
+.coupon__search--head {
+  display: grid;
+  grid-template-columns: 80% 20%;
+  grid-template-rows: 40px auto;
+  width: 90%;
+  margin: 25px auto 0;
+}
+
+.coupon__search--value {
+  grid-column: 1;
+  grid-row: 1;
+  background: #f7f7f7;
+  border-radius: 20px;
+  padding: 0 20px;
+}
+
+.coupon__search--value:focus {
+  border-style: none;
+  background: rgba(255, 206, 0, 0.4);
+}
+
+.coupon__search--value:placeholder {
+  color: #FAFAFA;
+}
+
+.coupon__search--btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.coupon__search--btn div {
+  background: #C4C4C4;
+  position: relative;
+  width: 30px;
+  border-radius: 5px;
+  height: 4px;
+  top: 0;
+  right: 0;
+}
+
+.coupon__search--btn div::before, .coupon__search--btn div::after {
+  content: "";
+  background: #C4C4C4;
+  position: absolute;
+  display: block;
+  width: 30px;
+  border-radius: 5px;
+  height: 4px;
+  right: 0;
+}
+
+.coupon__search--btn div::before {
+  top: -10px;
+}
+
+.coupon__search--btn div::after {
+  top: 10px;
+}
+
+#displayAdd {
+  height: auto;
+  padding: 20px 20px 15px;
+}
+
+@-webkit-keyframes conditions {
+  0% {
+    height: 0;
+    padding: 0;
+  }
+  100% {
+    height: auto;
+    padding: 20px 20px 15px;
+  }
+}
+
+@keyframes conditions {
+  0% {
+    height: 0;
+    padding: 0;
+  }
+  100% {
+    height: auto;
+    padding: 20px 20px 15px;
+  }
+}
+
+.coupon__search--conditions {
+  grid-column: 1/3;
+  grid-row: 2;
+  background: rgba(255, 206, 0, 0.3);
+  border-radius: 20px;
+  margin: 20px auto 0;
+  padding: 0;
+  transition: 0.2s height,0.2 opacity;
+  height: 0;
+  width: 90%;
+}
+
+.coupon__search--conditions > div {
+  font-weight: bold;
+}
+
+.coupon__search--conditions > ul span {
+  display: block;
+  margin: 10px 0 5px 5px;
+}
+
+.coupon__search--conditions > ul > li > ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.coupon__search--conditions > ul > li > ul li {
+  height: 25px;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  margin: 0 5px 5px 0;
+}
+
+.conditionsAdd {
+  color: #fff;
+  font-weight: bold;
+}
+
+.coupon__search--grid {
+  margin: 20px auto 0;
+  grid-column: 1/3;
+  grid-row: 3;
+  display: grid;
+  width: 90%;
+  grid-template-columns: 47% 47%;
+  grid-gap: 22px 6%;
+  grid-template-rows: 200px 100px 150px;
+}
+
+.coupon__search--grid > * {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.coupon__search--grid > * img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  filter: brightness(70%);
+}
+
+.coupon__search--grid > *:nth-child(1) {
+  grid-column: 1/3;
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.coupon__search--grid > *:nth-child(1) ul {
+  width: 100%;
+  height: 90%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.coupon__search--grid > *:nth-child(1) ul li {
+  width: 100%;
+  height: 100%;
+}
+
+.coupon__search--grid > *:nth-child(2) {
+  grid-column: 1/3;
+  grid-row: 2;
+}
+
+.coupon__search--grid > *:nth-child(3) {
+  grid-column: 1;
+  grid-row: 3;
+}
+
+.coupon__search--grid > *:nth-child(4) {
+  grid-column: 2;
+  grid-row: 3;
+}
+
+.coupon__search--grid ul .coupon__search--img {
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../img/app_coupon_coffee.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.coupon__search--grid .coupon__search--img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.coupon__search--grid .coupon__search--img:nth-child(2) {
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../img/app_coupon_udon.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.coupon__search--grid .coupon__search--img:nth-child(3) {
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../img/app_coupon_potato.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.coupon__search--grid .coupon__search--img:nth-child(4) {
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../img/app_coupon_nikuman.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.coupon__search--grid .coupon__search--img a {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  text-align: right;
+  padding: 15px 20px;
+}
+
+.coupon__search--grid .coupon__search--img .coupon__search--fav {
+  position: absolute;
+  top: 15px;
+  left: 10px;
+  width: 30px;
+  height: 30px;
+}
+
+.coupon__search--grid .coupon__search--img .coupon__search--fav svg {
+  width: 100%;
+}
+
+.coupon__search--grid .coupon__search--img .coupon__search--item {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.coupon__search--grid .coupon__search--img .coupon__search--price span {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.coupon__search--grid .favorite {
+  fill: #b1b1b1;
+}
+
+.coupon__search--grid #favAdd {
+  fill: #FF8B8B;
+}
+
+.coupon__search--grid .coupon__search--circle {
+  display: flex;
+}
+
+.coupon__search--grid .coupon__search--circle div {
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background: #c1c1c1;
+  margin-right: 10px;
+}
+
+.coupon__search--grid .coupon__search--circle div:last-child {
+  margin: 0;
+}
+
+/* -------------------------------
+▲クーポン検索ここまで▲
+------------------------------- */
+/* -------------------------------
+▼子ページここから▼
+------------------------------- */
+/* ------- 使用済みクーポン ------ */
+.hisory__wrap {
+  padding: 25px 0 0;
+  background: #FAFAFA;
+}
+
+.hisory__wrap .hisory__btn {
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100px;
+  background: #fff;
+  border-bottom: #eee 1px solid;
+  padding: 0 10%;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  font-weight: bold;
+  position: relative;
+}
+
+.hisory__wrap .hisory__btn:first-child {
+  border-top: #eee 1px solid;
+}
+
+.hisory__wrap .hisory__btn::before, .hisory__wrap .hisory__btn::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 4px;
+  border-radius: 5px;
+  display: block;
+  background: #D5D5D5;
+  right: 7%;
+  left: auto;
+}
+
+.hisory__wrap .hisory__btn::before {
+  transform: rotateZ(135deg);
+  bottom: 43px;
+}
+
+.hisory__wrap .hisory__btn::after {
+  transform: rotateZ(45deg);
+  top: 43px;
+}
+
+.hisory__wrap .hisory__btn p {
+  margin: 0 auto 0 0;
+  line-height: 2.4rem;
+}
+
+.hisory__wrap .hisory__btn p:nth-child(1), .hisory__wrap .hisory__btn p:nth-child(3) {
+  font-weight: normal;
+}
+
+/* ------ お気に入りクーポン ------ */
+.favorite__wrap {
+  padding: 25px 0 0;
+  background: #FAFAFA;
+}
+
+.favorite__btn {
+  min-height: 70px;
+  background: #fff;
+  border-bottom: #eee 1px solid;
+  padding: 0 10%;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  font-weight: bold;
+  padding: 0 7%;
+  position: relative;
+}
+
+.favorite__btn:first-child {
+  border-top: #eee 1px solid;
+}
+
+.favorite__btn::before, .favorite__btn::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 4px;
+  border-radius: 5px;
+  display: block;
+  background: #D5D5D5;
+  right: 7%;
+  left: auto;
+}
+
+.favorite__btn::before {
+  transform: rotateZ(135deg);
+  bottom: 21px;
+}
+
+.favorite__btn::after {
+  transform: rotateZ(45deg);
+  top: 21px;
+}
+
+.favorite__btn .favorite__btn--icon {
+  width: 30px;
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.favorite__btn p {
+  margin: 0 auto 0 0;
+  line-height: 2.3rem;
+}
+
+.favorite__btn p:nth-child(1) {
+  font-weight: normal;
+}
+
+/* -------- クーポン詳細 -------- */
+.detail__coupon {
+  height: 250px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+
+.detail__coupon--txt {
+  position: inherit;
+  z-index: 2;
+  color: #fff;
+  text-shadow: 0 0 20px #000;
+  margin: auto auto 25px 25px;
+}
+
+.detail__coupon--txt p:nth-child(1) {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.detail__coupon--txt p:nth-child(2) span:nth-child(1) {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.detail__coupon--img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.detail__coupon--img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  filter: brightness(50%);
+}
+
+.detail__attention {
+  width: 85%;
+  margin: 0 auto;
+  font-size: 1rem;
+  color: #939393;
+  line-height: 1.8rem;
+  margin-top: 30px;
+}
+
+.detail__apply {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.detail__apply .detail__apply--1 {
+  width: 100%;
+  height: 40px;
+  background: #C4C4C4;
+  font-weight: normal;
+  color: #707070;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.detail__apply .detail__apply--2 {
+  width: 100%;
+  height: 70px;
+  background: linear-gradient(90deg, #FFCE00, #FF9D00);
+  font-weight: bold;
+  color: #fff;
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.detail__apply .detail__apply--3 {
+  width: 100%;
+  height: 70px;
+  background: #C4C4C4;
+  font-weight: normal;
+  color: #707070;
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+/* -------------------------------
+▲子ページここまで▲
+------------------------------- */

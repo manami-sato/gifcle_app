@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="keywords" content="">
+    <meta name="description" content="#">
+    <meta name="twitter:card" content="summary">
+    <meta property="og:site_name" content="Gifcle">
+    <meta property="og:title" content="Gifcle">
+    <meta property="og:description" content="#">
+    <meta property="og:url" content="http://click.ecc.ac.jp/ecc/msatou/Gifcle_app/">
+    <meta property="og:image" content="img/app_favicon.png">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="600">
+    <meta property="og:image:height" content="400">
+    <meta property="og:type" content="website">
+    <link rel="shortcut icon" href="img/app_favicon.png" type="image/vnd.microsoft.icon">
+    <link rel="apple-touch-icon" href="img/app_favicon.png">
+    <link rel="manifest" href="manifest.json">
+    <script src="../common.js"></script>
+    <title>Gifcle app</title>
+    <link rel="stylesheet" href="css/account.css">
+  </head>
+  <body>
+    <header>
+      <h1 class="app__header app__header--back">アカウント設定</h1>
+    </header>
+    <main class="setting__wrap">
+      <div class="account__main">
+        <div class="account__main--icon"><img src="img/app_user.svg" alt="アイコン"></div>
+        <div class="account__main--txt">
+          <p>アイコン変更</p>
+          <div>プレーンイラストから選ぶ</div>
+          <div>アルバムから選ぶ</div>
+        </div>
+      </div>
+      <div class="setting__value--headline">名前</div>
+      <input class="setting__value--txt" type="text" placeholder="ひかり">
+      <div class="setting__value--headline">誕生日（変更できません）</div>
+      <div class="setting__value--txt" id="bg__gray">1月1日</div>
+      <p class="setting__txt">
+        名前とアイコンは他のユーザーに公開されます。<br>
+        個人情報や公序良俗に反する内容は記載しないでください。
+      </p><a class="setting__btn" href="account.html">保存</a>
+    </main>
+    <script src="js/common.js"></script>
+    <script src="js/back.js"></script>
+  </body>
+</html>

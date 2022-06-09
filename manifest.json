@@ -1,0 +1,17 @@
+{
+  "name": "Gifcle",
+  "short_name": "Gifcle",
+  "description": "#きもちを贈り合うサブスクリプション Gifcleが提供するのは、“あたらしいギフトのサイクル”です。",
+  "start_url": "https://click.ecc.ac.jp/ecc/msatou/Gifcle_app/calendar.html",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#fff",
+  "theme_color": "#fff",
+  "icons": [
+    {
+      "src": "/ecc/msatou/Gifcle_app/img/app_favicon.png",
+      "sizes": "400x400",
+      "type": "image/png"
+    }
+  ]
+}
